@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+}
+.homeContainer {
+  width: 100vw;
+  height: 100vh;
+  background: rgb(43, 40, 40);
+  position: relative;
+}
+.mybg {
+  position: absolute;
+  top: 25%;
+  left: 45%;
+  padding: 50px;
+  border-radius: 50%;
+  opacity: 0.5;
+  border: 1px solid rgb(187, 187, 187);
+  border-left: 10px solid rgb(187, 187, 187);
+  animation: rotate 10s linear infinite;
+
+}
+@keyframes rotate {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+.circleborder {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  opacity: 0.5;
+  background: linear-gradient(
+    to top,
+    rgb(70, 4, 65),
+    rgb(154, 48, 166),
+    rgb(241, 209, 245)
+  );
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+}
+
+.homeContainer::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 30%;
+  right: 18%;
+  border-radius: 50%;
+  opacity: 0.5;
+  background: linear-gradient(to top, rgb(59, 1, 53), rgb(237, 161, 245));
+}
+.homeContainer::before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  bottom: 20%;
+  left: 25%;
+  border-radius: 50%;
+  background: linear-gradient(to top, rgb(59, 1, 53), rgb(237, 161, 245));
+  opacity: 0.3;
+}
+.mybg::before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  bottom: 90%;
+  left: 0%;
+  border-radius: 50%;
+  background: linear-gradient(to top, rgb(59, 1, 53), rgb(237, 161, 245));
+  opacity: 0.5;
+}
+.header {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 20px;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgb(43, 40, 40);
+  z-index: 10;
+}
+.header ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-right: 10%;
+  overflow: hidden;
+}
+.header ul li {
+  color: white;
+  list-style: none;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+.header ul li:hover {
+  background: rgb(79, 78, 78, 0.2);
+  cursor: pointer;
+  text-decoration: underline;
+}
+.hero-container {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  color: white;
+  width: 40%;
+  text-align: center;
+}
+.hero-container h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+.hero-container h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.hero-container p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.hero-container .cta-button {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  border: none;
+  margin-top: 30px;
+}
+.cta-button a{
+  text-decoration: none;  
+}
+
+.team{
+  margin-top: 10vh;
+  padding-left: 100px;
+}
+
+.portfolioCards{
+  height: 80vh;
+  width: 100vw;
+  padding-top: 10vh;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+  align-items: center;
+  /* background: rgb(43, 40, 40); */
+  gap: 20px;
+}
+
+
+.card {
+  width: 240px;
+  height: 360px;
+  background-color: rgb(212, 206, 206);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3.2px 6.4px rgba(0,0,0,0.1); 
+   display: flex;
+  flex-direction: column;
+  padding: 16px;
+  padding-bottom: 0 !important;
+}
+.left-section {
+  width: 100%;
+  height: 320px;
+}
+.right-section {
+  width: 100%;
+  height: 160px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.left-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;   
+}
+.card h2 {
+  margin: 0 0 4px 0;     font-size: 19.2px;   
+  color: #333;
+}
+.card h3 {
+  margin: 0 0 12px 0;   
+  font-size: 12.8px;   
+  color: #2c2a2a;
+}
+.info {
+  font-size: 11.2px;   
+  color: #666;
+  margin-bottom: 4px;   }
+.info .viewMore {
+  background-color: rgb(241, 209, 245);
+  color: #333;
+  padding: 3.2px 6.4px;    
+  font-weight: 500;
+  border: none;
+  width: 80%;
+  border-radius: 8px;   
+  font-size: 16px;   
+}
+.info .viewMore a{text-decoration: none;}
