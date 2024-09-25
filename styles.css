@@ -235,3 +235,268 @@ body {
   font-size: 16px;   
 }
 .info .viewMore a{text-decoration: none;}
+
+
+
+
+
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInFromLeft {
+  from { transform: translateX(-50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInFromRight {
+  from { transform: translateX(50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes skillBarFill {
+  from { width: 0; }
+  to { width: var(--skill-percent); }
+}
+
+:root {
+  --primary-color: #8A2BE2; /* Violet */
+  --secondary-color: #4B0082; /* Indigo (darker violet) */
+  --text-color: #333;
+  --bg-color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 0;
+  animation: fadeIn 1s ease-out;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+nav {
+  background-color: var(--secondary-color);
+  padding: 1rem 0;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+  animation: fadeIn 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+nav ul li:nth-child(1) { animation-delay: 0.2s; }
+nav ul li:nth-child(2) { animation-delay: 0.4s; }
+nav ul li:nth-child(3) { animation-delay: 0.6s; }
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--primary-color);
+}
+
+section {
+  padding: 3rem 0;
+  animation: fadeIn 1s ease-out;
+}
+
+.profile-image {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.profile-image img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--primary-color);
+  animation: fadeIn 1s ease-out;
+}
+
+h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.skill-item {
+  background-color: #f0f0f0;
+  border-left: 4px solid var(--primary-color);
+  padding: 1rem;
+  font-size: 0.9rem;
+  transition: transform 0.3s ease;
+  animation: slideInFromLeft 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+.skill-item:nth-child(even) {
+  animation: slideInFromRight 0.5s ease-out forwards;
+}
+
+.skill-item:hover {
+  transform: translateY(-5px);
+}
+
+.skill-name {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.skill-bar {
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.skill-progress {
+  height: 100%;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  animation: skillBarFill 1s ease-out forwards;
+}
+
+.about-content, .hobbies-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hobbies-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.hobby-item {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  animation: fadeIn 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+.hobby-item:nth-child(1) { animation-delay: 0.2s; }
+.hobby-item:nth-child(2) { animation-delay: 0.4s; }
+.hobby-item:nth-child(3) { animation-delay: 0.6s; }
+.hobby-item:nth-child(4) { animation-delay: 0.8s; }
+
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 3rem 0;
+  margin-top: 2rem;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.footer-section h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.footer-section ul {
+  list-style-type: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: var(--primary-color);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #444;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--primary-color);
+}
+.university-info {
+  text-align: center;
+  margin-top: 1rem;
+  font-style: italic;
+  color: var(--secondary-color);
+}
+
+.skills-grid {
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.skill-item {
+  margin-bottom: 1rem;
+}
