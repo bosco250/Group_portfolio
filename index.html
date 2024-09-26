@@ -1,50 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portifolio</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div class="homeContainer">
-    <div class="header">
-      <ul>
-        <li><a>Home</a></li>
-        <li><a>About</a></li>
-        <li><a>Skills</a></li>
-        <li><a>Contact</a></li>
-      </ul>
-    </div>
-    <div class="mybg">
-      <div class="circleborder">        
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portifolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="homeContainer">
+      <div class="header">
+        <ul>
+          <li><a>Home</a></li>
+          <li><a>About</a></li>
+          <li><a>Skills</a></li>
+          <li><a>Contact</a></li>
+        </ul>
+      </div>
+      <div class="mybg">
+        <div class="circleborder"></div>
+      </div>
+      <div class="hero-container">
+        <h1>Welcome to Our Creative Space</h1>
+        <h3>
+          We are a team of passionate designers and developers dedicated to
+          bringing your ideas to life.
+        </h3>
+        <p>Explore our portfolio to see how we can help elevate your brand.</p>
+        <button class="cta-button">
+          <a href="#team">View Our Work</a>
+        </button>
       </div>
     </div>
-    <div class="hero-container">
-      <h1>Welcome to Our Creative Space</h1>
-      <h3>We are a team of passionate designers and developers dedicated to bringing your ideas to life.</h3>
-      <p>Explore our portfolio to see how we can help elevate your brand.</p>
-      <button class="cta-button">
-        <a href="#portfolio" >View Our Work</a>
-      </button>
-    </div>
-  </div>
-  <div class="team"><h1>Team</h1></div>
-  <div class="portfolioCards">
-    <div class="card">
-      <div class="left-section">
-              <img src="images/Bruce.jpg" alt="Dani Martinez">
-       </div>
-      <div class="right-section">
-          <h2>Sangano Bruce </h2>
-          <h3> Software Developer</h3>
-          <div class="info"> 
-            <button class="viewMore"><a href="portfolio/bruce.html">See more...</a></button>
+    <div class="team-container" id="team">
+      <div class="my-team">
+      <div class="team"><h1>Team</h1></div>
+      <div class="portfolioCards">
+        <div class="card">
+          <div class="left-section">
+            <img src="images/bosco.jpg" alt="Dani Martinez" />
           </div>
-       </div>
-  </div>
-  
-  </div>
-  
-</body>
+          <div class="right-section">
+            <h2>Jean Bosco Dusengimana</h2>
+            <h3>Software Developer</h3>
+            <div class="info">
+              <button class="viewMore">
+                <a href="portfolio/bosco.html">See more...</a>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="left-section">
+            <img src="images/immaculate.jpg" alt="Dani Martinez" />
+          </div>
+          <div class="right-section">
+            <h2>Byukusenge Immaculee</h2>
+            <h3>Software Developer</h3>
+            <div class="info">
+              <button class="viewMore">
+                <a href="portfolio/immaculee.html">See more...</a>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" id="">
+          <div class="left-section">
+            <img src="images/Bruce.jpg" alt="Dani Martinez" />
+          </div>
+          <div class="right-section">
+            <h2>Sangano Bruce</h2>
+            <h3>Software Developer</h3>
+            <div class="info">
+              <button class="viewMore">
+                <a href="portfolio/bruce.html">See more...</a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </body>
 </html>
