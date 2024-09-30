@@ -13,6 +13,10 @@ body {
   background: rgb(43, 40, 40);
   position: relative;
 }
+.homeContainer .header ul li a{
+  text-decoration: none;
+  color: white;
+}
 .mybg {
   position: absolute;
   top: 25%;
